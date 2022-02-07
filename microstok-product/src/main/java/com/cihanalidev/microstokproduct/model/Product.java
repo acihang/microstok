@@ -1,7 +1,13 @@
 package com.cihanalidev.microstokproduct.model;
 
-public class Product {
+import java.io.Serializable;
 
+public class Product implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5424585303394671232L;
 	private String id;
 	private String name;
 	private String category;
