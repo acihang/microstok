@@ -1,25 +1,30 @@
-package com.cihanalidev.microstokproduct.model;
+package com.cihanalidev.microstockproduct.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("product")
 public class Product implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -5424585303394671232L;
-	private String id;
+	@Id
+	private Long productId;
 	private String name;
 	private String category;
 	private String brand;
-	private Integer count;
-
-	public String getId() {
-		return id;
+	private BigDecimal price;
+	public Long getProductId() {
+		return productId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setProductId(Long productId) {
+		this.productId = productId;
 	}
 
 	public String getName() {
@@ -46,12 +51,16 @@ public class Product implements Serializable {
 		this.brand = brand;
 	}
 
-	public Integer getCount() {
-		return count;
+	public BigDecimal getPrice() {
+		return price;
 	}
 
-	public void setCount(Integer count) {
-		this.count = count;
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }
