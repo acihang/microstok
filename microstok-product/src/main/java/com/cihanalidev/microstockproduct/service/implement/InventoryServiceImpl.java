@@ -49,11 +49,5 @@ public class InventoryServiceImpl implements InventoryService {
 			abstract int sleep();
 		}
 	}
-
-	@Override
-	public void aa() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 }

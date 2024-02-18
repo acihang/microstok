@@ -14,6 +14,4 @@ public interface InventoryService {
 
 	public void addProductCount(InventoryDTO inventoryDTO);
 	
-	protected void aa();
-	
 }
